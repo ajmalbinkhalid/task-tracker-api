@@ -92,7 +92,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ### 5. Run the server
 
-uvicorn src.main:app --reload
+python run.py
 
 Server runs at
 
@@ -102,6 +102,9 @@ Swagger API documentation
 
 http://127.0.0.1:8000/docs
 
+Swagger Interface
+
+![Swagger](docs/swagger_overview.png)
 ---
 
 ## Authentication
