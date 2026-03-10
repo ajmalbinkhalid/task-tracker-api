@@ -4,7 +4,6 @@ from datetime import datetime
 
 from src.database import Base
 
-
 class User(Base):
     __tablename__ = "users"
 
@@ -21,7 +20,6 @@ class User(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     tasks = relationship("Task", back_populates="owner")
-
 
 class Task(Base):
     __tablename__ = "tasks"

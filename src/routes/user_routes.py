@@ -1,16 +1,13 @@
 from fastapi import APIRouter, Depends
 from src.auth import get_current_user
 from src import models
-
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from src.database import get_db
 from src.auth import get_current_user
 from src import models
 
-
 router = APIRouter(prefix="/users", tags=["Users"])
-
 
 @router.get("/me")
 def get_my_profile(current_user: models.User = Depends(get_current_user)):
@@ -20,7 +17,6 @@ def get_my_profile(current_user: models.User = Depends(get_current_user)):
         "email": current_user.email,
         "role": current_user.role
     }
-
 
 @router.get("/")
 def get_all_users(

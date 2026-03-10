@@ -26,7 +26,6 @@ app.include_router(auth_routes.router)
 
 app.include_router(task_routes.router)
 
-
 @app.get("/")
 def root():
     return {"message": "Task Tracker API running"}
